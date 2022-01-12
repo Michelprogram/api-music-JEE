@@ -1,11 +1,7 @@
 package com.example.ApiMusic21.model;
 
 import com.sun.istack.NotNull;
-import org.hibernate.annotations.ManyToAny;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Set;
 
 @Entity
 public class Artist {
@@ -17,29 +13,15 @@ public class Artist {
     private String name;
 
     @NotNull
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "genre_id")
-    private Set<Genre> Genre;
-
-    @NotNull
     private String pays;
-
-    /*
-    @NotNull
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "album_id")
-    private ArrayList<Album> album;
-
-     */
 
     public Artist(){
 
     }
 
-    public Artist(Integer id, String name, Set<Genre> Genre, String pays){
+    public Artist(Integer id, String name, String pays){
         this.id = id;
         this.name = name;
-        this.Genre = Genre;
         this.pays = pays;
     }
 
@@ -59,14 +41,6 @@ public class Artist {
         this.name = name;
     }
 
-    public Set<Genre> getGenre() {
-        return Genre;
-    }
-
-    public void setGenre(Set<Genre> genre) {
-        Genre = genre;
-    }
-
     public String getPays() {
         return pays;
     }
@@ -75,13 +49,4 @@ public class Artist {
         this.pays = pays;
     }
 
-    /*
-    public ArrayList<Album> getAlbum() {
-        return album;
-    }
-
-    public void setAlbum(ArrayList<Album> album) {
-        this.album = album;
-    }
-     */
 }

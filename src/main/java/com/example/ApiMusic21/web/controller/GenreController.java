@@ -2,6 +2,7 @@ package com.example.ApiMusic21.web.controller;
 
 import com.example.ApiMusic21.dao.GenreDao;
 import com.example.ApiMusic21.model.Genre;
+import com.example.ApiMusic21.web.execptions.ArtisteIntrouvable;
 import com.example.ApiMusic21.web.execptions.GenreIntrouvable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
