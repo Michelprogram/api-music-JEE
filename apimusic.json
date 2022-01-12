@@ -1,0 +1,339 @@
+{
+  "_type": "export",
+  "__export_format": 1,
+  "__export_date": "2022-01-12T16:33:02.906Z",
+  "__export_source": "insomnia.chrome.app:v2.7.0",
+  "items": [
+    {
+      "_type": "request_group",
+      "_id": "grp_1641984916617",
+      "name": "ApiMusic",
+      "environments": {},
+      "requests": [
+        {
+          "_type": "request",
+          "_id": "req_1641984916617",
+          "url": "http://localhost:9090/Genres/",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "getAllGenres"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641985499496",
+          "url": "http://localhost:9090/Genres/",
+          "method": "POST",
+          "body": "    {\n        \"id\":\"5\",\n        \"name\" : \"Nouveau Genre\"\n    }",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "addGenre"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641986297378",
+          "url": "http://localhost:9090/Genres/1",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "findGenreByid"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641991048345",
+          "url": "http://localhost:9090/Genres/name/RAp",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "findByName"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641991910072",
+          "url": "http://localhost:9090/Genres/id/1",
+          "method": "DELETE",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "deleteGenre"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641992239454",
+          "url": "http://localhost:9090/Genres/id/2",
+          "method": "PUT",
+          "body": "{\n    \"id\":\"2\",\n    \"name\" : \"test\"\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "updateGenre"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641995244876",
+          "url": "http://localhost:9090/Artistes/",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "getAllArtists"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641995547234",
+          "url": "http://localhost:9090/Artistes",
+          "method": "POST",
+          "body": "{\n    \"id\":\"5\",\n    \"name\":\"lil uzi vert\",\n    \"pays\":\"états-unis\"\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "addArtists"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641996081318",
+          "url": "http://localhost:9090/Artistes/name/p",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "getByName"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641996169421",
+          "url": "http://localhost:9090/Artistes/pays/et",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "getByPays"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641996412755",
+          "url": "http://localhost:9090/Artistes/id/1",
+          "method": "DELETE",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "delArtist"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641996571093",
+          "url": "http://localhost:9090/Artistes/id/1",
+          "method": "PUT",
+          "body": "{\n    \"id\":\"1\",\n    \"name\" : \"xxxtenatcion\",\n    \"pays\" : \"test\"    \n        }",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "updateArtist"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1641999394161",
+          "url": "http://localhost:9090/Album/",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "getAllAlbum"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1642002243515",
+          "url": "http://localhost:9090/Album/name/?",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "getAlbumByname"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1642002559064",
+          "url": "http://localhost:9090/Album/tracks/8",
+          "method": "GET",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "findByPrice"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1642003604434",
+          "url": "http://localhost:9090/Album/add/xxxtentacion",
+          "method": "POST",
+          "body": "{\n    \"id\":\"5\",\n    \"date\": \"2021\",\n    \"name\" : \"dorianAlbum\",    \n    \"numberTrack\": \"10\",\n    \"price\": \"21.21\"\n}\n",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "addAlbum"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1642004924661",
+          "url": "http://localhost:9090/Album/addGenre/5/1/",
+          "method": "PUT",
+          "body": "{}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "addGenre"
+        }
+      ]
+    }
+  ]
+}
