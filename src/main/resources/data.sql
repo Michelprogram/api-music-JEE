@@ -1,9 +1,9 @@
-INSERT INTO product VALUES(1, 'Ordinateur portable' , 350, 120);
+INSERT INTO genre VALUES(1, 'RAP US' );
 
 
 
-INSERT INTO product VALUES(2, 'Aspirateur Robot' , 500, 200);
+INSERT INTO genre VALUES(2, 'Mumble RAP');
 
 
 
-INSERT INTO product VALUES(3, 'Table de Ping Pong' , 750, 400);
+INSERT INTO genre VALUES(3, 'Synthwave');
