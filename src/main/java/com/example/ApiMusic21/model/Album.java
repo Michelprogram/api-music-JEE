@@ -1,7 +1,6 @@
 package com.example.ApiMusic21.model;
 
 import com.sun.istack.NotNull;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -24,12 +23,12 @@ public class Album {
     @NotNull
     private Double price;
 
-    @NotNull
+
     @ManyToOne
     @JoinColumn(name = "artist_id")
     private Artist artist;
 
-    @NotNull
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "genre_id")
     private Set<Genre> genre;

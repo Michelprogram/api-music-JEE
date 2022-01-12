@@ -2,6 +2,8 @@ package com.example.ApiMusic21.dao;
 
 import com.example.ApiMusic21.model.Album;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,9 +16,13 @@ public interface AlbumDao extends JpaRepository<Album, Integer> {
 
     //Find artist with all different genre
 
-    /*
-    @Query("SELECT id, numberTrack, name, date, price FROM Album a WHERE a.prix > :prixLimit")
-    List<Album> albumByPrice(@Param("prixLimit") int prix);
+    @Query("SELECT a FROM Album a WHERE a.price >= :prixLimit")
+    List<Album> albumByPrice(@Param("prixLimit") double prix);
 
-     */
+    @Query("SELECT a FROM Album a WHERE a.date >= :year")
+    List<Album> albumByYear(@Param("year") String year);
+
+    @Query("SELECT a FROM Album a WHERE a.numberTrack >= :track")
+    List<Album> albumByTrack(@Param("track") int track);
+
 }

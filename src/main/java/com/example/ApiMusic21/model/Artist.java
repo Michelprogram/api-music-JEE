@@ -25,6 +25,8 @@ public class Artist {
         this.pays = pays;
     }
 
+
+
     public Integer getId() {
         return id;
     }
