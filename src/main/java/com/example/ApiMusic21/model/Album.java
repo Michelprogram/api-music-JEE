@@ -18,10 +18,10 @@ public class Album {
     private String name;
 
     @NotNull
-    private String date;
+    private String dateAlbum;
 
     @NotNull
-    private Double price;
+    private Float price;
 
 
     @ManyToOne
@@ -35,11 +35,11 @@ public class Album {
 
     public Album(){}
 
-    public Album(Integer id, Integer numberTrack, String name, String date, Double price, Set<Genre> genre, Artist artist){
+    public Album(Integer id, Integer numberTrack, String name, String date, Float price, Set<Genre> genre, Artist artist){
         this.id = id;
         this.numberTrack = numberTrack;
         this.name = name;
-        this.date = date;
+        this.dateAlbum = date;
         this.price = price;
         this.genre = genre;
         this.artist = artist;
@@ -61,11 +61,11 @@ public class Album {
         this.genre = genre;
     }
 
-    public Double getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
@@ -94,10 +94,10 @@ public class Album {
     }
 
     public String getDate() {
-        return date;
+        return dateAlbum;
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.dateAlbum = date;
     }
 }

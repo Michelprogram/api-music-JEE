@@ -50,7 +50,7 @@ public class AlbumController {
     }
 
     @GetMapping(value = "/price/{price}")
-    public List<Album> findByPrice(@PathVariable double price){
+    public List<Album> findByPrice(@PathVariable float price){
         return albumDao.albumByPrice(price);
     }
 

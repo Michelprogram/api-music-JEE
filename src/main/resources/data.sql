@@ -15,6 +15,3 @@ INSERT INTO album_genre VALUES(1,2);
 
 INSERT INTO album_genre VALUES(2,3);
 INSERT INTO album_genre VALUES(2,4);
-
-
-
