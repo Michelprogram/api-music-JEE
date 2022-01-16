@@ -1,5 +1,6 @@
 package com.example.ApiMusic21;
 
+import com.example.ApiMusic21.Utils.SQLData;
 import com.example.ApiMusic21.model.Artist;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,11 +12,7 @@ public class ApiMusic21Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiMusic21Application.class, args);
-		//System.out.println("Hello**************");
+		//System.out.println("Hello**************")
+		SQLData sqlData = new SQLData();
 	}
-
-	public void fakeData(){
-		//Artist artist = new Artist("xxxtentacion","");
-	}
-
 }
