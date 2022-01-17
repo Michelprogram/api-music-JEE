@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+/*
 @Component
 public class SQLData implements ApplicationRunner {
 

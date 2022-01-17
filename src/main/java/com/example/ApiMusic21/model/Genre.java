@@ -3,12 +3,15 @@ package com.example.ApiMusic21.model;
 import com.sun.istack.NotNull;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Genre {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotNull
@@ -16,11 +19,9 @@ public class Genre {
 
     public Genre(){}
 
-    public Genre(Integer id, String name){
-        this.id = id;
+    public Genre(String name){
         this.name = name;
     }
-
 
     public Integer getId() {
         return id;
@@ -36,5 +37,13 @@ public class Genre {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Genre{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
