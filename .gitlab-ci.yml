@@ -6,6 +6,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
+    - which java
     - echo "Compilation du code et creation d'un jar"
     - ./gradlew jar
     - ./gradlew build
