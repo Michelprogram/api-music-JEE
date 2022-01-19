@@ -3,6 +3,8 @@
 > Nous avons décidé de créer une API de musique. Dans laquelle on trouve des Albums, Artistes et des Genres. Pour des choix techniques nous avons décidé qu’un Album avait un Artist et qu’un Artist avait plusieurs Albums. Les Albums peuvent avoir plusieurs Genres et les Genres peuvent appartenir à plusieurs Albums.
 > 
 
+⚠️  LE PROJET NE DOIT PAS ETRE EXECUTE SUR LE RESEAU DE L’IUT
+
 ```mermaid
 classDiagram
     class Album
