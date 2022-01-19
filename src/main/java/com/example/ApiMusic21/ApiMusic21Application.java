@@ -13,7 +13,5 @@ public class ApiMusic21Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiMusic21Application.class, args);
-		//System.out.println("Hello**************")
-		//SQLData sqlData = new SQLData();
 	}
 }
