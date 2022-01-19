@@ -26,6 +26,13 @@ dependencies {
 
 }
 
+jar{
+	manifest{
+		attributes(
+				"Main-Class": "src.main.java.com.example.ApiMusic21.ApiMusic21Application"
+		)
+	}
+}
 
 test {
 	useJUnitPlatform()
