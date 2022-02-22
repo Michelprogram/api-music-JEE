@@ -1,0 +1,7 @@
+create table album_genre (album_id integer not null, genre_id integer not null, primary key (album_id, genre_id));
+create table artist (id integer not null, name varchar(255), pays varchar(255), primary key (id));
+create table genre (id integer not null, name varchar(255), primary key (id));
+
+alter table album add constraint FKmwc4fyyxb6tfi0qba26gcf8s1 foreign key (artist_id) references artist;
+alter table album_genre add constraint FKld60pu9t8ff70bc6nrnnv91lx foreign key (genre_id) references genre;
+alter table album_genre add constraint FKgobybiodeygwcmlhr7sxv4y01 foreign key (album_id) references album;
