@@ -18,7 +18,7 @@ public class Album {
     private String name;
 
     @NotNull
-    private String date;
+    private String date_album;
 
     @NotNull
     private Double price;
@@ -39,7 +39,7 @@ public class Album {
         this.id = id;
         this.numberTrack = numberTrack;
         this.name = name;
-        this.date = date;
+        this.date_album = date;
         this.price = price;
         this.genre = genre;
         this.artist = artist;
@@ -94,10 +94,10 @@ public class Album {
     }
 
     public String getDate() {
-        return date;
+        return date_album;
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.date_album = date;
     }
 }

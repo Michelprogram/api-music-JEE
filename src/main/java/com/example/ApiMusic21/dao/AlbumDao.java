@@ -19,7 +19,7 @@ public interface AlbumDao extends JpaRepository<Album, Integer> {
     @Query("SELECT a FROM Album a WHERE a.price >= :prixLimit")
     List<Album> albumByPrice(@Param("prixLimit") double prix);
 
-    @Query("SELECT a FROM Album a WHERE a.date >= :year")
+    @Query("SELECT a FROM Album a WHERE a.date_album >= :year")
     List<Album> albumByYear(@Param("year") String year);
 
     @Query("SELECT a FROM Album a WHERE a.numberTrack >= :track")
