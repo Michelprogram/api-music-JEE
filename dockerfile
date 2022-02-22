@@ -1,11 +1,9 @@
-FROM gradle:jdk17-alpine
+FROM open:19-jdk-alpine3.15
 
 WORKDIR /app
 
-COPY . .
+COPY build/ .
 
-RUN ["./gradlew", "build"]
+EXPOSE 9090
 
-RUN ["./gradlew", "jar"]
-
-CMD ["java", "-jar", "build/libs/ApiMusic21-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "libs/ApiMusic21-0.0.1-SNAPSHOT.jar"]

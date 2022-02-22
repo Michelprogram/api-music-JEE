@@ -53,6 +53,23 @@ $bash : ./gradlew jar #Créer un jar
 $bash : java -jar build/libs/ApiMusic21-0.0.1-SNAPSHOT.jar #Lance le serveur
 ```
 
+Lancer dans un container docker, avant il faut avoir build l'image avec les commandes précédente
+
+```bash
+
+$bash : docker build -t api-music.
+
+$bash : docker run --name container-music-api -p 9090:80 api-music
+
+#ou
+
+$bash : docker run --name container-music-api -d -p 9090:80 api-music
+
+#Supprimer un container
+
+$bash : docker container rm container-music-api 
+```
+
 # Insomnia
 
 [The API Design Platform and API Client](https://insomnia.rest/)
