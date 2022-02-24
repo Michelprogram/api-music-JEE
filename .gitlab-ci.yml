@@ -10,10 +10,9 @@ before_script:
 build-job:       # Construction de l'image
   image: gradle:jdk11 # Départ d'une image gradle avec jdk version 11
   stage: build # L'étape de build
-  before_script:
+  script:
     - echo "Version de java"
     - which java
-  script:
     - echo "Compilation du code et creation d'un jar"
     - ./gradlew build -x test # Build sans les tests
     - ./gradlew jar # Créer un jar
