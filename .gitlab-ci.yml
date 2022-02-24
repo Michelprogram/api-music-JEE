@@ -4,10 +4,12 @@ stages:
   - docker
 
 build-job:       # Construction de l'image
+  image: gradle:jdk11
   stage: build
   before_script:
     - echo "Version de java"
     - which java
+    - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
     - echo "Compilation du code et creation d'un jar"
     - ./gradlew build
@@ -16,7 +18,10 @@ build-job:       # Construction de l'image
 
 
 unit-test-job:   # Exécution des tests
-  stage: test    
+  image: gradle:jdk11
+  stage: test
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
     - echo "Exécution des tests"
     - ./gradlew build
