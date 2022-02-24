@@ -4,25 +4,24 @@ stages:
   - docker
 
 build-job:       # Construction de l'image
-  image: gradle:jdk11
-  stage: build
+  image: gradle:jdk11 # Départ d'une image gradle avec jdk version 11
+  stage: build # L'étape de build
   before_script:
     - echo "Version de java"
     - which java
     - apt-get -qq update && apt-get install -qqy --no-install-recommends openconnect wget
-  #openconnect nomade.etu.univ-nantes.fr --juniper --user=e21a432s -b < mdp.txt
+    #openconnect nomade.etu.univ-nantes.fr --juniper --user=e21a432s -b < mdp.txt
+    #Impossible de se connecter au VPN
   script:
     - echo "Compilation du code et creation d'un jar"
-    - ./gradlew build -x test
-    - ./gradlew jar
+    - ./gradlew build -x test # Build sans les tests
+    - ./gradlew jar # Créer un jar
     - echo "Fin du build"
 
 
 unit-test-job:   # Exécution des tests
   image: gradle:jdk11
   stage: test
-  before_script:
-    - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
     - echo "Exécution des tests"
     - ./gradlew build
@@ -33,13 +32,13 @@ unit-test-job:   # Exécution des tests
 deploy-job: # Test build docker
   stage: docker
   services:
-    - docker:dind
+    - docker:dind # Docker in docker
   script:
     - echo "Build docker"
     - ./gradlew build
     - ./gradlew jar
-    - docker build -t api-music.
-    - docker run --name container-music-api -d -p 9090:80 api-music
+    - docker build -t api-music. # Créer une image à partir du docker file
+    - docker run --name container-music-api -d -p 9090:80 api-music # Lance un container avec l'aimge api-music
     - echo "Liste docker et container"
-    - docker ps && docker image ls
+    - docker ps && docker image ls # Liste les images et container
     - echo "Docker déployé avec succes."
