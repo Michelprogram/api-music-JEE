@@ -10,7 +10,7 @@ build-job:       # Construction de l'image
     - echo "Version de java"
     - which java
     - apt-get -qq update && apt-get install -qqy --no-install-recommends openconnect wget
-    #openconnect nomade.etu.univ-nantes.fr --juniper --user=e21a432s -b < mdp.txt
+    - openconnect nomade.etu.univ-nantes.fr --juniper --user=e21a432s -b < mdp.txt
     #Impossible de se connecter au VPN
   script:
     - echo "Compilation du code et creation d'un jar"
