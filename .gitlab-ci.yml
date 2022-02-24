@@ -10,7 +10,7 @@ build-job:       # Construction de l'image
     - echo "Version de java"
     - which java
     - apt-get -qq update && apt-get install -qqy --no-install-recommends openconnect wget
-    - openconnect nomade.etu.univ-nantes.fr --juniper --user=berdjugin-jf -b < mdp.txt
+    - openconnect nomade.etu.univ-nantes.fr --juniper --user=E21A432S -b < mdp.txt
   script:
     - echo "Compilation du code et creation d'un jar"
     - ./gradlew build -x test
