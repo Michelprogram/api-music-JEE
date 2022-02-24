@@ -33,6 +33,7 @@ deploy-job: # Test build docker
   stage: docker
   services:
     - docker:dind # Docker in docker
+  when: always # Execute meme si test failed
   script:
     - echo "Build docker"
     - ./gradlew build
