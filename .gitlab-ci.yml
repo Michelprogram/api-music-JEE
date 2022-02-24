@@ -3,9 +3,9 @@ stages:
   - test
   - docker
 
-before_script:
-  - apt-get -qq update && apt-get install -qqy --no-install-recommends openconnect wget
-  - openconnect nomade.etu.univ-nantes.fr --juniper --user=e21a432s -b < mdp.txt
+#before_script:
+#  - apt-get -qq update && apt-get install -qqy --no-install-recommends openconnect wget
+#  - openconnect nomade.etu.univ-nantes.fr --juniper --user=e21a432s -b < mdp.txt
 
 build-job:       # Construction de l'image
   image: gradle:jdk11 # Départ d'une image gradle avec jdk version 11
