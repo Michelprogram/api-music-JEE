@@ -20,6 +20,11 @@ dependencies {
 	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-oauth2-resource-server'
+	implementation 'org.springframework.security:spring-security-oauth2-jose'
+	implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.2.0'
+	implementation 'org.json:json:20160810'
 }
 
 test {
