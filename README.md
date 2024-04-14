@@ -27,13 +27,11 @@ classDiagram
 
 ```
 
-![Capture d’écran 2022-01-19 à 16.03.12.png](API%20Rest%20d644d/Capture_decran_2022-01-19_a_16.03.12.png)
-
 # Base de données
 
 Pour le stockage des données nous avons choisi Microsoft Azure (2Go) ce qui permet de stocker les données dans le cloud, et nécessite aucune configuration de votre côté pour l’exécution du programme. Noté que si vous exécuter le projet sous le réseau de l’IUT il est bloqué par le par-feux.
 
-![Capture d’écran 2022-01-17 à 15.33.49.png](API%20Rest%20d644d/Capture_decran_2022-01-17_a_15.33.49.png)
+![database](img/database.png)
 
 Dans l’application vous trouverez un fichier `schema.sql` ****qui détermine la structure de nos tables. A chaque démarrage du projet l’application ajoute des données venant de `[https://theaudiodb.com](https://theaudiodb.com)`, permettant de remplir la base de données. Grâce au fichier `ApiTheAudioDb.java`
 
